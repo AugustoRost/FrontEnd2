@@ -1,5 +1,5 @@
 body {
-    background-image: url(/image/wallpapersden.com_rick-and-morty-2020_3840x2160.jpg);
+    background-image: url(/image/391708-evil-rick-sanchez-rick-and-morty-4k-pc-wallpaper.jpg);
     background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
@@ -18,8 +18,13 @@ header {
 #img-head {
     width: 350px;
 }
+.img-end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
 footer {
-    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,4 +39,14 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+#pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pagination button{
+   margin: 20px;
+   background-color: #05f75f;
+   color:black;
 }

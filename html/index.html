@@ -5,14 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Api Rick and Morty</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="shortcut icon" href="/image/RICK_MORTY_ICON.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <img src="/image/Rick-And-Morty-Logo.png" alt="" id="img-head">
-        <img src="/image/rick-and-morty-portal-shoes-white-clothing-zavvi-23.png" alt="" id="img-foot">
+        <input type="text" id="searchByNome" placeholder="Search by character">
     </header>
-    <footer>
-        <h3 id="text-footer"> © 2023 Growdev Augusto Rost</h3>
-    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/scripts.js"></script>
+    <main>
+        <div id="pagination">
+        <button id="buttonNext">Next</button>
+        <button id="buttonPrev">Previous</button>
+        </div>
+    </main>
 </body>
+<footer>
+    <img src="/image/rick-and-morty-portal-shoes-white-clothing-zavvi-23.png" alt="" id="img-foot">
+    <h3 id="text-footer"> © 2023 Growdev Augusto Rost</h3>
+</footer>
 </html>
