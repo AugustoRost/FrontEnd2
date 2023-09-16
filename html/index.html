@@ -10,17 +10,20 @@
 <body>
     <header>
         <img src="/image/Rick-And-Morty-Logo.png" alt="" id="img-head">
-        <input type="text" id="searchByNome" placeholder="Search by character">
+        <input type="text" id="searchByName" placeholder="Search by character">
     </header>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./js/api.js"></script>
-    <script src="./js/scripts.js"></script>
     <main>
+        <div class="characters" id="characterslist">
+            
+        </div>
         <div id="pagination">
-        <button id="buttonNext">Next</button>
-        <button id="buttonPrev">Previous</button>
+            <button id="buttonNext">Next</button>
+            <button id="buttonPrev">Previous</button>
         </div>
     </main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/scripts.js"></script>
 </body>
 <footer>
     <img src="/image/rick-and-morty-portal-shoes-white-clothing-zavvi-23.png" alt="" id="img-foot">
