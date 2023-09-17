@@ -1,15 +1,16 @@
 const characterList = document.getElementById('characterslist')
-const searchByName = document.getElementById('searchByNome')
+const searchByName = document.getElementById('searchByName')
 const pagination = document.getElementById('pagination')
 const buttonNext = document.getElementById('buttonNext')
 const buttonPrev = document.getElementById('buttonPrev')
 
 let currentPage = 1
 
-async function fetchCharacter (page = 1) {
+async function fetchCharacter (page = 1, name = '') {
     try {
         const params = {
-            page
+            page,
+            name
         }
         const response = await api.get("/character", {
             params
@@ -52,6 +53,12 @@ async function fetchCharacter (page = 1) {
         }
      })
  }
+
+ searchByName.addEventListener('input', () =>{
+    currentPage = 1
+    fetchCharacter(currentPage, searchByName.value)
+ })
+
 fetchCharacter()
 
 
