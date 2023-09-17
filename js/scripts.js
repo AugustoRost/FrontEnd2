@@ -4,9 +4,16 @@ const pagination = document.getElementById('pagination')
 const buttonNext = document.getElementById('buttonNext')
 const buttonPrev = document.getElementById('buttonPrev')
 
-async function getApi () {
+let currentPage = 1
+
+async function fetchCharacter (page = 1) {
     try {
-        const response = await api.get("/character")
+        const params = {
+            page
+        }
+        const response = await api.get("/character", {
+            params
+        })
         const characters = response.data.results
         const info = response.data.info
         showcaracters (characters)
@@ -17,6 +24,7 @@ async function getApi () {
 }
 }
  function showcaracters (characters) {
+    characterList.innerHTML = ''
     characters.forEach(character => {
         const card = document.createElement('div')
         card.classList.add('card')
@@ -31,11 +39,19 @@ async function getApi () {
     })
  }
  function displayPagination(info){
-     buttonNext.addEventListener('click', ()=> {
- 
+     buttonPrev.addEventListener('click', ()=> {
+        if (currentPage > 1) {
+            currentPage--
+            fetchCharacter(currentPage)
+        }
      })
-    buttonPrev.addEventListener('click', ()=> {
-
-    })
+     buttonNext.addEventListener('click', ()=> {
+        if (currentPage < info.pages) {
+            currentPage++
+            fetchCharacter(currentPage)
+        }
+     })
  }
-getApi()
+fetchCharacter()
+
+
