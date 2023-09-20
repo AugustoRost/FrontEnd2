@@ -33,9 +33,11 @@ async function fetchCharacter (page = 1, name = '') {
         card.innerHTML = `
         <img src="${character.image}" />
         <h2>${character.name}<h2>
-        <p>${character.status} - ${character.species}</p>
-        <p>Last Location</p>
-        <p>${character.location.name}</p>`
+        <p> Status: ${character.status} </p>
+        <p>Species: ${character.species}</p>
+        <p>Gender: ${character.gender}</p>
+        <p>Last Location: ${character.location.name}</p>
+        <p></p>`
         characterList.appendChild(card)
     })
  }
@@ -60,5 +62,10 @@ async function fetchCharacter (page = 1, name = '') {
  })
 
 fetchCharacter()
+
+const btn = document.querySelector("#top");
+btn.addEventListener("click", function() {
+    window.scrollTo(0, 0);
+});
 
 
