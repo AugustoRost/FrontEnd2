@@ -28,16 +28,14 @@ async function fetchCharacter (page = 1, name = '') {
     characterList.innerHTML = ''
     characters.forEach(character => {
         const card = document.createElement('div')
-        card.classList.add('card')
-
         card.innerHTML = `
-        <img src="${character.image}" />
-        <h2>${character.name}<h2>
-        <p> Status: ${character.status} </p>
-        <p>Species: ${character.species}</p>
-        <p>Gender: ${character.gender}</p>
-        <p>Last Location: ${character.location.name}</p>
-        <p></p>`
+        <div class="d-flex align-content-center card text-start border border-success rounded bg-transparent mt-4 pb-5" style="width: 18rem;" id"tamanhoCard">
+        <img src="${character.image}" class="card-img-top" alt="...">
+        <div class="card-body p-0">
+        <p class="card-text text-white pt-4">${character.name}<br>${character.status} - ${character.species}</p>
+        <p class="card-text text-white"><span class="text-dark-emphasis">Ultima localizacao conhecida</span> <br>${character.location.name}</p>
+        <p class="card-text text-white"><span class="text-dark-emphasis">Visto a ultima vez em:</span> <br>${character.location.name}</p>
+        </div>`
         characterList.appendChild(card)
     })
  }
@@ -62,10 +60,3 @@ async function fetchCharacter (page = 1, name = '') {
  })
 
 fetchCharacter()
-
-const btn = document.querySelector("#top");
-btn.addEventListener("click", function() {
-    window.scrollTo(0, 0);
-});
-
-

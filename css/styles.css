@@ -1,46 +1,22 @@
-body {
-    background-image: url(/image/391708-evil-rick-sanchez-rick-and-morty-4k-pc-wallpaper.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+background-color: #252525 !important;
+
+}
+#TitleHeader{
+    font-size: 45px;
+    color: #095a27;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#img-head {
-    width: 350px;
-}
-
-.img-end {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
+#HeaderIcon{
+    width: 50px;
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#img-foot {
-    width: 300px;
-}
-
-#text-footer {
-    color: antiquewhite;
-    font-size: 10px;
-    font-family: sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,51 +36,30 @@ footer {
     border: none;
     cursor: pointer;
     padding: 10px 15px;
-
+    
 }
 
 .characters {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin: 0 20px;
+    background-color: #252525;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px 10px;
-    padding: 5px;
-    border-radius: 8px;
-    background-color: transparent
+    height: 40px;
 }
 
-.card img {
-    border-radius: 8px;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 1rem
-}
 
-.card h2 {
-    color: white;
-    margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(43, 255, 0, 0.726);
-}
-
-.card p {
-    margin-bottom: 0.5rem;
-    color: white;
-    display: flex;
-    align-items: center;
-    text-shadow: 2px 2px 4px rgba(43, 255, 0, 0.726);
-}
 #searchByName{
     background-color: transparent;
         width: 40vh;
         height: 40px;
 }
-#searchByName::placeholder {
-    color: rgba(43, 255, 0, 0.726);
+#back{
+    width: 100%;
 }

@@ -1,33 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Api Rick and Morty</title>
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="shortcut icon" href="/image/RICK_MORTY_ICON.png" type="image/x-icon">
-</head>
-<body>
-    <header>
-        <img src="/image/Rick-And-Morty-Logo.png" alt="" id="img-head">
-        <input type="text" id="searchByName" placeholder="Search by character name">
-    </header>
-    <main>
-        <div class="characters" id="characterslist">
-            
-        </div>
-        <div id="pagination">
-            <button id="buttonPrev">Previous</button>
-            <button id="top">Top</button>
-            <button id="buttonNext">Next</button>
-        </div>
-    </main>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <header class="bg-white">
+            <div class="container-fluid pb-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="/image/RICK_MORTY_ICON.png" alt="Header Icon" class="img-fluid mt-3" id="HeaderIcon">
+                    </div>
+                    <div class="row">
+                        <div id="TitleHeader" class="col title d-flex justify-content-center">API de Rick and Morty</div>
+                    </div>
+                </div>
+                <div class="row my-5">
+                    <div class="col d-flex justify-content-center">
+                        <input class="form-control me-2" id="searchByName" type="search" placeholder="Pesquisa" aria-label="Search">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="container-fluid">
+                <div class="characters w-75" id="characterslist">
+                </div>
+                <div id="pagination">
+                    <button id="buttonPrev">Previous</button>
+                    <button id="buttonNext">Next</button>
+                </div>
+            </main>
+            <img src="/image/FUNDO_novo.jpg" class="img-fluid" alt="" id="back">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/js/api.js"></script>
     <script src="/js/scripts.js"></script>
 </body>
 <footer>
-    <img src="/image/rick-and-morty-portal-shoes-white-clothing-zavvi-23.png" alt="" id="img-foot">
     <h3 id="text-footer"> © 2023 Growdev Augusto Rost</h3>
 </footer>
 </html>
