@@ -5,23 +5,16 @@
 }
 body{
 background-color: #252525 !important;
-
+overflow-x: hidden
 }
-#TitleHeader{
-    font-size: 45px;
-    color: #095a27;
+.animaColor{
+    font-size: 45px !important;
+    color: #095a27 !important;
 }
 
 #HeaderIcon{
     width: 50px;
 }
-
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 #pagination {
     display: flex;
     justify-content: center;
@@ -60,6 +53,93 @@ footer {
         width: 40vh;
         height: 40px;
 }
-#back{
-    width: 100%;
+#bg-footer{
+    background-color: #151916 !important;
+    color:#151916 !important
 }
+/* anima */
+.waviy {
+    position: relative;
+    
+  }
+  .waviy{
+    animation: moveData 5s 1;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: rgb(254, 254, 254);
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+  #searchByName{
+    animation: moveNavbar 2s 1;
+  }
+  @keyframes moveNavbar {
+    0% {
+      animation-timing-function: ease-in;
+      opacity: 0;
+      transform: translateX(-250px);
+  }
+  
+  38% {
+      animation-timing-function: ease-out;
+      opacity: 1;
+      transform: translateX(0);
+  }
+
+  55% {
+      animation-timing-function: ease-in;
+      transform: translateX(-65px);
+  }
+  
+  72% {
+      animation-timing-function: ease-out;
+      transform: translateX(0);
+  }
+
+  81% {
+      animation-timing-function: ease-in;
+      transform: translateX(-28px);
+  }
+
+  90% {
+      animation-timing-function: ease-out;
+      transform: translateX(0);
+  }
+
+  95% {
+      animation-timing-function: ease-in;
+      transform: translateX(-8px);
+  }
+  
+  100% {
+      animation-timing-function: ease-out;
+      transform: translateX(0);
+  }
+}
+
+#opacityPicture{
+    animation-name: pictureOpacity;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transition: 2s;
+}
+@keyframes pictureOpacity {
+    0% {
+         opacity: 0;
+    }
+    50% {
+         opacity: 1;
+    }
+    100% {
+        opacity: 0;
+       }
+ }
